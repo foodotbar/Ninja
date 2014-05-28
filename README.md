@@ -14,3 +14,5 @@ a storage testing framework for data center via run test scripts in VMs
 9. now, attention, you should run ./reset-boot-time.sh to make sure the next time, you can get the VM's right start time
 10. Okay, finally you should halt all the VM, just run ./exec-on-all.py halt
 11. If you have any questions, ask me
+
+I used this test framework testd Gluster, NFS, iSCSI, ceph, Sheepdog, local HDD, local SSD, their Read/Write rate and IOPS and bandwith.
