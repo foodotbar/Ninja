@@ -1,0 +1,84 @@
+=====================================================================
+HOSTNAME::
+r10-81
+
+---------------------------------------------------------------------
+PRODUCT		: S2600GZ
+
+---------------------------------------------------------------------
+CPU::
+cores		: 32
+model name	: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz
+cpu MHz		: 1200.000
+cache size	: 20480 KB
+
+---------------------------------------------------------------------
+BIOS::
+Version		:SE5C600.86B.01.06.0001.090720121056
+
+---------------------------------------------------------------------
+MEMORY::
+Total:  32823748
+
+---------------------------------------------------------------------
+LOCAL DISK::
+NAME                               SIZE TYPE FSTYPE      MOUNTPOINT
+sr0                               1024M rom              
+sda                                1.8T disk             
+├─sda1                             500M part ext4        /boot
+├─sda2                            14.5G part LVM2_member 
+│ ├─vg_template01-lv_root (dm-0)  12.5G lvm  ext4        /
+│ └─vg_template01-lv_swap (dm-1)     2G lvm  swap        [SWAP]
+├─sda3                           916.3G part ext4        /tmp
+└─sda4                           931.7G part ext4        /root/Desktop
+sdb                              223.6G disk ext4        /mnt/sheepdog
+
+---------------------------------------------------------------------
+PARTITIONS::
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg_template01-lv_root
+                       13G   11G  1.6G  87% /
+proc                     0     0     0   -  /proc
+sysfs                    0     0     0   -  /sys
+devpts                   0     0     0   -  /dev/pts
+tmpfs                  16G  8.1M   16G   1% /dev/shm
+/dev/sda1             485M  104M  356M  23% /boot
+/dev/sda3             902G  324G  533G  38% /tmp
+/dev/sda4             918G   31G  840G   4% /root/Desktop
+/dev/sdb              221G  161G   49G  77% /mnt/sheepdog
+none                     0     0     0   -  /proc/sys/fs/binfmt_misc
+sunrpc                   0     0     0   -  /var/lib/nfs/rpc_pipefs
+
+---------------------------------------------------------------------
+NETWORKS::
+brdummy0  Link encap:Ethernet  HWaddr 06:C8:7D:F1:64:7A  
+          inet addr:192.168.255.254  Bcast:192.168.255.255  Mask:255.255.255.0
+	Link detected: yes
+eth0      Link encap:Ethernet  HWaddr 00:1E:67:54:8F:1F  
+          inet addr:172.16.32.151  Bcast:172.16.32.255  Mask:255.255.255.0
+	Link detected: yes
+eth5      Link encap:Ethernet  HWaddr 00:1E:67:93:37:61  
+          inet addr:172.16.36.91  Bcast:172.16.36.255  Mask:255.255.255.0
+	Link detected: yes
+
+BRIDGES::
+bridge name	bridge id		STP enabled	interfaces
+brdummy0		8000.06c87df1647a	no		dummy0
+							tap0
+							tap1
+							tap2
+							tap3
+
+ROUTE::
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+172.16.36.0     0.0.0.0         255.255.255.0   U     0      0        0 eth5
+172.16.32.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+192.168.255.0   0.0.0.0         255.255.255.0   U     0      0        0 brdummy0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1007   0        0 eth5
+169.254.0.0     0.0.0.0         255.255.0.0     U     1008   0        0 dummy0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1009   0        0 brdummy0
+0.0.0.0         172.16.32.254   0.0.0.0         UG    0      0        0 eth0
+
+=====================================================================
