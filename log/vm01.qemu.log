@@ -1,0 +1,10 @@
++ switch=br3
++ '[' -n tap0 ']'
+++ whoami
++ /usr/sbin/tunctl -u root -t tap0
+TUNSETIFF: Device or resource busy
++ /sbin/ip link set tap0 up
++ sleep 0.5s
++ /usr/sbin/brctl addif br3 tap0
++ exit 0
+/etc/qemu-ifdown: could not launch network script

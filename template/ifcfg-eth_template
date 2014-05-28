@@ -1,0 +1,6 @@
+
+DEVICE=eth1
+ONBOOT=yes
+BRIDGE=br1
+TYPE=Ethernet
+USERCTL=no

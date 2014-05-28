@@ -1,0 +1,6 @@
+
+DEVICE=dummy0
+ONBOOT=yes
+BRDIGE=brdummy0
+TYPE=Ethernet
+USERCTL=no

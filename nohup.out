@@ -1,0 +1,58 @@
+PROFILE: local1ssd
+additional drives: []
+workdir:/root/Desktop/workdir//
+vmcores:1
+vmmem:1024
+macbase:DE:AD:BE:
+ipnet: 192.168.255.0/24
+bridgeport:dummy
+qemuexec:/usr/libexec/qemu-kvm
+HOSTIP:192.168.255.254
+workflow:['test-dd', 'test-mysqlfio', 'test-videoio']
+vms:['vm1', 'vm2']
+ips:['192.168.255.1', '192.168.255.2']
+location:['/tmp/1/', '/tmp/2/']
+macs:['DE:AD:BE:A8:FF:01', 'DE:AD:BE:A8:FF:02']
+exec: rm -f tmp/script.tar.gz; tar czf /root/Desktop/workdir///tmp/script.tar.gz -C /root/Desktop/workdir// script/
+exec: scp /root/Desktop/workdir///tmp/script.tar.gz root@192.168.255.1:/root/
+exec: ssh root@192.168.255.1 rm -rf script
+exec: ssh root@192.168.255.1 tar xzf script.tar.gz
+exec: scp /root/Desktop/workdir///tmp/script.tar.gz root@192.168.255.2:/root/
+exec: ssh root@192.168.255.2 rm -rf script
+exec: ssh root@192.168.255.2 tar xzf script.tar.gz
+Now running: test-dd
+(2, 0)
+Waiting 2 more results for:test-dd
+test-dd finished.
+Now running: test-mysqlfio
+(2, 0)
+Waiting 2 more results for:test-mysqlfio
+test-mysqlfio finished.
+Now running: test-videoio
+(2, 0)
+Waiting 2 more results for:test-videoio
+test-videoio finished.
+All test in guests finished, pls check result dir.
++ switch=brdummy0
++ '[' -n tap0 ']'
+++ whoami
++ /usr/sbin/tunctl -u root -t tap0
+TUNSETIFF: Device or resource busy
++ /sbin/ip link set tap0 up
++ sleep 0.5s
++ /usr/sbin/brctl addif brdummy0 tap0
++ exit 0
+/etc/qemu-ifdown: could not launch network script
+/etc/qemu-ifup: could not launch network script
+qemu-system-x86_64: -netdev tap,id=net0,: Device 'tap' could not be initialized
+/etc/qemu-ifup: could not launch network script
+qemu-system-x86_64: -netdev tap,id=net0: Device 'tap' could not be initialized
+/etc/qemu-ifup: could not launch network script
+qemu-system-x86_64: -netdev tap,id=net0: Device 'tap' could not be initialized
+qemu: terminating on signal 2
+/etc/qemu-ifup: could not launch network script
+qemu-system-x86_64: -netdev tap,id=net0,: Device 'tap' could not be initialized
+/etc/qemu-ifup: could not launch network script
+qemu-system-x86_64: -netdev tap,id=net0: Device 'tap' could not be initialized
+qemu-system-x86_64: -device e1000,netdev=net0,mac=DE:AD:BE:A8:FF:01: Property 'e1000.netdev' can't find value 'net0'
+qemu-system-x86_64: -device e1000,netdev=net0,mac=DE:AD:BE:A8:FF:01: Property 'e1000.netdev' can't find value 'net0'
