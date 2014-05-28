@@ -20,7 +20,9 @@ I used this framework testd Gluster, NFS, iSCSI, ceph, Sheepdog, local HDD, loca
 a typical report like this:
 
 testHostname	profile	vmName	BootTime(second)	UpTime(second)	dd-ndw(MB/s)	dd-dw(MB/s)	dd-ndr(MB/s)	dd-dr(MB/s)	MYSQL-R-ipos	MYSQL-W-ipos	Video-Write	Video-Random-R	Viedo-Stride-R
+
 hcg1	gluster-4nodes-1	vm1	-178377	16.4	52.2	53.3	61	56	182	49	51539	3311342	3743341
+
 hcg1	gluster-4nodes-1	vm2	36	31.04	51	50.1	80	53	181	48	44125	3580267	3306130
 
 
