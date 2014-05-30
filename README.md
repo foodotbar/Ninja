@@ -4,7 +4,7 @@ Ninja
 a storage testing framework for data center via run test scripts in VMs
 
 1. get and compile Python 2.7 under /root/Desktop/workdir/
-2. download base.img.tar, disk-0.img.tar, qemu-1.5.3.tar from pan.baidu.com/xxxxx to /root/Desktop/workdir/template/
+2. download base.img.tar, disk-0.img.tar, qemu-1.5.3.tar from http://pan.baidu.com/s/1hqf11v2 to /root/Desktop/workdir/template/
 3. edit the config.ini file, set your Host-Node's password, and the place where your VM's disk images
 4. then run ./gethostready.py, get your host ready for VMs to start
 5. then run ./startVMs.py, start the test VMs, when all VMs get start, you can get a file under /root/Desktop/work/result/ named boot.XXX…… contains VMs' start time and up time
