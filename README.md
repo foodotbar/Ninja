@@ -19,30 +19,10 @@ I used this framework testd Gluster, NFS, iSCSI, ceph, Sheepdog, local HDD, loca
 
 a typical report like this:
 
-testHostname	profile	vmName	BootTime(second)	UpTime(second)	dd-ndw(MB/s)	dd-dw(MB/s)	dd-ndr(MB/s)	dd-dr(MB/s)	MYSQL-R-ipos	MYSQL-W-ipos	Video-Write	Video-Random-R	Viedo-Stride-R
+https://github.com/foodotbar/Ninja/blob/master/report/details.2vms.2014-02-18_20_42_33.csv
 
-hcg1	gluster-4nodes-1	vm1	-178377	16.4	52.2	53.3	61	56	182	49	51539	3311342	3743341
-
-hcg1	gluster-4nodes-1	vm2	36	31.04	51	50.1	80	53	181	48	44125	3580267	3306130
+and this:
 
 
-vm1	read iops=	84	write iops=	40					
-750(usec)	1000(usec)	2(msec)	4(msec)	10(msec)	20(msec)	50(msec)	100(msec)	250(msec)	500(msec)
-0.05%,	0.25%	32.19%,	6.55%,	32.66%,	21.18%,	6.87%	0.24%,	0.02%,	0.01%
-vm1	write iops=	100							
-750(usec)	1000(usec)	2(msec)	4(msec)	10(msec)	20(msec)				
-0.15%,	0.17%	99.28%,	0.35%,	0.03%,	0.02%				
-vm1	read iops=	100							
-750(usec)	1000(usec)	2(msec)	4(msec)	10(msec)	20(msec)	50(msec)			
-0.18%,	7.40%	91.08%,	0.47%,	0.53%,	0.30%,	0.03%			
-vm2	read iops=	84	write iops=	41					
-750(usec)	1000(usec)	2(msec)	4(msec)	10(msec)	20(msec)	50(msec)	100(msec)	250(msec)	
-0.03%,	0.08%	32.77%,	6.48%,	32.83%,	20.74%,	6.83%	0.24%,	0.01%	
-vm2	write iops=	100							
-750(usec)	1000(usec)	2(msec)	4(msec)	10(msec)	50(msec)				
-0.10%,	0.55%	99.08%,	0.20%,	0.05%,	0.02%				
-vm2	read iops=	100							
-750(usec)	1000(usec)	2(msec)	4(msec)	10(msec)	20(msec)	50(msec)			
-0.72%,	18.28%	79.95%,	0.38%,	0.43%,	0.22%,	0.02%			
 
-
+https://github.com/foodotbar/Ninja/blob/master/report/fiotests.2vms.2014-02-20_22_15_58.csv
